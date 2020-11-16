@@ -1,4 +1,4 @@
-<img align="center" ![alt text](https://github.com/marcusWittho/trybe-exercises/blob/master/logo.png)>
+<div align="center">![alt text](https://github.com/marcusWittho/trybe-exercises/blob/master/logo.png)</div>
 
 # Exercícios!!
 
