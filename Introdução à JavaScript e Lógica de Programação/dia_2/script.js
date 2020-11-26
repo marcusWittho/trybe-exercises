@@ -29,3 +29,14 @@ console.log(arithmeticAverage(numbers));
 
 //=================================================
 
+// Exercício 4 (Teste de condição)
+function condition() {
+  let result = '';
+  if (arithmeticAverage(numbers) > 20) {
+    result = 'Valor maior que 20';
+  }else {
+    result = 'Valor menor ou igual a 20';
+  }
+  return result;
+}
+console.log(condition());
