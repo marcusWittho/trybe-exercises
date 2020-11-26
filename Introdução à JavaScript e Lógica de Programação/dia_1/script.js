@@ -31,4 +31,22 @@ function updatePiece() {
 //===========================================================================
 
 //  Exercício 10
+function profit() {
+  let inCost = document.querySelector('#inCost');
+  let inSalePrice = document.querySelector('#inSalePrice');
+  let inSoldAmount = document.querySelector('#inSoldAmount');
+  let outProfit = document.querySelector('#outProfit');
 
+  let tax = 0.20;
+  let cost = Number(inCost.value) + (Number(inCost.value) * tax);
+  let salePrice = Number(inSalePrice.value);
+  let soldAmount = Number(inSoldAmount.value);
+  let result = (salePrice - cost) * soldAmount;
+
+  outProfit.textContent = `O lucro será de R$ ${result.toFixed(2)}`;
+  
+}
+
+let btnCalc = document.querySelector('#btnCalc');
+btnCalc.addEventListener('click', profit);
+//===========================================================================
