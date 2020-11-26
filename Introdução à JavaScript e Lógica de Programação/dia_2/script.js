@@ -40,3 +40,14 @@ function condition() {
   return result;
 }
 console.log(condition());
+
+//=================================================
+
+// Exercício 5 (Retorna o maior valor contido no array)
+function higherNumber(array) {
+  let higher = Math.max(...array);
+  return higher;
+}
+console.log(higherNumber(numbers));
+
+//=================================================
