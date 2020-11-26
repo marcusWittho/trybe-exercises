@@ -1,3 +1,4 @@
+//  Exercício 06
 function updatePiece() {
   let cboPieces = document.querySelector('#cboPieces');
   let piece = cboPieces.options[cboPieces.selectedIndex].value;
@@ -27,3 +28,7 @@ function updatePiece() {
   let outText = document.querySelector('#outText');
   outText.textContent = validMoves;
 };
+//===========================================================================
+
+//  Exercício 10
+
