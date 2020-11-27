@@ -7,11 +7,7 @@ function show(array) {
     console.log(number);
   }
 };
-<<<<<<< HEAD
 //show(numbers);
-=======
-show(numbers);
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -20,11 +16,7 @@ function sum(array) {
   let total = array.reduce((total, number) => total + number, 0);
   return total;
 };
-<<<<<<< HEAD
 //console.log(sum(numbers));
-=======
-console.log(sum(numbers));
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -33,11 +25,7 @@ function arithmeticAverage(array) {
   let total = sum(array) / numbers.length;
   return total;
 };
-<<<<<<< HEAD
 //console.log(arithmeticAverage(numbers));
-=======
-console.log(arithmeticAverage(numbers));
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -51,11 +39,7 @@ function condition() {
   }
   return result;
 };
-<<<<<<< HEAD
 //console.log(condition());
-=======
-console.log(condition());
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -64,11 +48,7 @@ function higherNumber(array) {
   let higher = Math.max(...array);
   return higher;
 };
-<<<<<<< HEAD
 //console.log(higherNumber(numbers));
-=======
-console.log(higherNumber(numbers));
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -88,11 +68,7 @@ function totalOdd(array) {
   }
   return result; 
 };
-<<<<<<< HEAD
 //console.log(totalOdd(numbers));
-=======
-console.log(totalOdd(numbers));
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -101,11 +77,7 @@ function smallestNumber(array) {
   let smaller = Math.min(...array);
   return smaller;
 };
-<<<<<<< HEAD
 //console.log(smallestNumber(numbers));
-=======
-console.log(smallestNumber(numbers));
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -118,11 +90,7 @@ function createArray() {
   console.log(arrayNumbers);
   return arrayNumbers;
 };
-<<<<<<< HEAD
 //createArray();
-=======
-createArray();
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
 
 //=================================================
 
@@ -132,7 +100,6 @@ function divideElements(array) {
     console.log(number / 2);
   }  
 };
-<<<<<<< HEAD
 //divideElements(createArray());
 
 //=================================================
@@ -140,23 +107,19 @@ function divideElements(array) {
 // Bônus (Bubble Sort)
 
 let v = [5 , 3 , 2 , 4 , 7 , 1 , 0 , 6];
-
-for (let i = 0; i < v.length; i += 1) {
-  for (let j = 0; j < v.length - i; j += 1) {
-    if (v[j] > v[j + 1]) {
-      aux = v[j];
-      v[j] = v[j + 1];
-      v[j + 1] = aux;
+function orderList(array) {
+  for (let i = 0; i < v.length; i += 1) {
+    for (let j = 0; j < v.length - i; j += 1) {
+      if (v[j] > v[j + 1]) {
+        aux = v[j];
+        v[j] = v[j + 1];
+        v[j + 1] = aux;
+      }
     }
   }
+  return v;
 };
 
-
-let test = [3, 4, 5, 6];
-[3, 4].move(0, 1);
-console.log(test);
-=======
-divideElements(createArray());
+//console.log(orderList(v));
 
 //=================================================
->>>>>>> ec1b2c402c2e6d97021fd7c77df2407f709de6aa
