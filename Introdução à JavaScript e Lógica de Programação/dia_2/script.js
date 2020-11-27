@@ -88,8 +88,18 @@ function createArray() {
     arrayNumbers.push(index);
   }
   console.log(arrayNumbers);
-}
+  return arrayNumbers;
+};
 createArray();
 
 //=================================================
 
+// Exercício 9 (Retorna a divisão por 2 de todos os elementos do array)
+function divideElements(array) {
+  for (number of array) {
+    console.log(number / 2);
+  }  
+};
+divideElements(createArray());
+
+//=================================================
