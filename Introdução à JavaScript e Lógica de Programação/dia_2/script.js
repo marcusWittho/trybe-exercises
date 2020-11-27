@@ -80,3 +80,16 @@ function smallestNumber(array) {
 console.log(smallestNumber(numbers));
 
 //=================================================
+
+// Exercício 8 (Cria um array com valores do 1 ao 25);
+function createArray() {
+  let arrayNumbers = [];
+  for (let index = 1; index <= 25; index += 1) {
+    arrayNumbers.push(index);
+  }
+  console.log(arrayNumbers);
+}
+createArray();
+
+//=================================================
+
