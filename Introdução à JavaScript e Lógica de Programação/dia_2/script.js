@@ -71,3 +71,12 @@ function totalOdd(array) {
 console.log(totalOdd(numbers));
 
 //=================================================
+
+// Exercício 7 (Retorna o menor valor contido no array)
+function smallestNumber(array) {
+  let smaller = Math.min(...array);
+  return smaller;
+};
+console.log(smallestNumber(numbers));
+
+//=================================================
