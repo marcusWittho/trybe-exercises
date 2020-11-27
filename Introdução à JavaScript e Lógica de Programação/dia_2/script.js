@@ -38,7 +38,7 @@ function condition() {
     result = 'Valor menor ou igual a 20';
   }
   return result;
-}
+};
 console.log(condition());
 
 //=================================================
@@ -47,7 +47,27 @@ console.log(condition());
 function higherNumber(array) {
   let higher = Math.max(...array);
   return higher;
-}
+};
 console.log(higherNumber(numbers));
+
+//=================================================
+
+// Exercício 6 (Retorna a quantida de números ímpares)
+function totalOdd(array) {
+  let count = 0;
+  for (number of numbers) {
+    if (number % 2 != 0) {
+      count += 1;
+    }
+  }
+  let result = '';
+  if (count == 0) {
+    result = 'Nenhum valor ímpar encontrado';
+  }else {
+    result = `Total de números ímpares: ${count}`;
+  }
+  return result; 
+};
+console.log(totalOdd(numbers));
 
 //=================================================
