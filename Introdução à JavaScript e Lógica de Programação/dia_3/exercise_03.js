@@ -13,7 +13,6 @@ function inverseTriangle(n) {
     console.log(star);
     star = '';
     count -= 1;    
-  }
-  
+  }  
 };
 inverseTriangle(5);
