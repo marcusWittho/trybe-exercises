@@ -5,7 +5,7 @@ function tree(n) {
   let right = middle + 1;
 
   for (let row = 0; row < middle; row += 1) {
-    for (let column = 0; column <= n; column += 1) {
+    for (let column = 1; column <= n; column += 1) {
        if (column < right && column > left) {
          star += '*';
        }else {
