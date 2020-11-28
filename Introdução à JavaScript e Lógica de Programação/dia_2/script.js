@@ -119,7 +119,6 @@ function orderList(array) {
   }
   return v;
 };
-
 //console.log(orderList(v));
 
 //=================================================
