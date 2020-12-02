@@ -43,11 +43,22 @@ function biggestName(array) {
 //====================================================
 
 //  Exercício 5
-function maxRepeat(array) {
+function mostRepeated(array) {
   let list = array.sort();
+  let currentCount = 0;
+  let objCount = {};
+
+  for (let i = 0; i < list.length; i += 1) {
+    for (let j = 0; j < list.length; j += 1) {
+      if (list[i] === list[j]) {
+        currentCount += 1;
+      }
+    }
+    objCount[`indice[${i}]`] = `repetiu ${currentCount} vezes`;
+    currentCount = 0;
+  }
   
-  
-  return lista
+  return objCount;
 }
 
-console.log(maxRepeat([2, 3, 2, 5, 8, 2, 3]));
+console.log(mostRepeated([2, 3, 2, 5, 8, 2, 3]));
