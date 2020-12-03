@@ -61,11 +61,35 @@
         turnGreen();
 
         // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        
+        function turnWhite() {
+          let redSquare = document.getElementsByClassName('center-content')[0];
+          redSquare.style.backgroundColor = 'white';
+        }
+        turnWhite();
 
         // 4. Crie uma função que corrija o texto da tag <h1>.
+        function correctingText() {
+          let correctingTitle = document.getElementsByTagName('h1')[0];
+          correctingTitle.innerText = 'Exercício 5.1 - Javascript';
+        }
+        correctingText();
+
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function turnUpperCase() {
+          let paragraph_2 = document.getElementsByTagName('p')[2];
+          paragraph_2.innerText = paragraph_2.innerText.toUpperCase();
+        }
+        turnUpperCase();
+
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        function displayContent() {
+          let pTag = document.getElementsByTagName('p');
+          for (let i = 0; i < pTag.length; i += 1) {
+            console.log(pTag[i]);
+          }
+        }
+        displayContent();
+
     </script>
   </body>
 </html>
