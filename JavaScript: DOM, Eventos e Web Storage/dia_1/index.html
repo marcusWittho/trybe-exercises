@@ -75,7 +75,21 @@
         correctingText();
 
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function turnUpperCase() {
+          let paragraph_2 = document.getElementsByTagName('p')[2];
+          paragraph_2.innerText = paragraph_2.innerText.toUpperCase();
+        }
+        turnUpperCase();
+
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        function displayContent() {
+          let pTag = document.getElementsByTagName('p');
+          for (let i = 0; i < pTag.length; i += 1) {
+            console.log(pTag[i]);
+          }
+        }
+        displayContent();
+
     </script>
   </body>
 </html>
