@@ -148,6 +148,20 @@
       // Exercício 5
       centerContent.style.backgroundColor = 'rgb(11,143,112)';
 
+      // Exercício 6
+      let listLi = document.querySelectorAll('li');
+      
+      for (let item in listLi) {
+        let element = listLi[item];
+        let subItems = ['nove' , 'dez'];
+
+        for (let subItem of subItems) {
+          if (element.innerText === subItem) {
+            listUl.removeChild(element);
+          }
+        }
+      }
+
     </script>
   </body>
 </html>
