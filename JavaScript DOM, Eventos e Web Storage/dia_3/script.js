@@ -36,18 +36,18 @@ for (let item of dezDaysList) {
 }
 
 // Exercício 2
-function createButton(string) {
-  let buttonsContainer = document.querySelector('.buttons-container');
+let buttonsContainer = document.querySelector('.buttons-container');
+function createButtonHoliday(string) {
 
   let btnHoliday = document.createElement('button');
 
   btnHoliday.setAttribute('type' , 'button');
   btnHoliday.id = 'btn-holiday';
-  btnHoliday.innerText = 'Feriados';
+  btnHoliday.innerText = string;
   
   buttonsContainer.appendChild(btnHoliday);
 }
-createButton('Feriado');
+createButtonHoliday('Feriado');
 
 // Exercício 3
 function changeColorHoliday() {
@@ -63,3 +63,16 @@ function changeColorHoliday() {
 }
 let btnHoliday = document.querySelector('#btn-holiday');
 btnHoliday.addEventListener('click', changeColorHoliday);
+
+// Exercício 4
+function createButtonFriday(string) {
+  let btnFriday = document.createElement('button');
+  
+  btnFriday.setAttribute('type' , 'button');
+  btnFriday.id = 'btn-friday';
+  // btnFriday.className = 'buttons-container';
+  btnFriday.innerText = string;
+
+  buttonsContainer.appendChild(btnFriday);
+}
+createButtonFriday('Sextou!!');
