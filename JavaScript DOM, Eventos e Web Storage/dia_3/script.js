@@ -21,11 +21,17 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 let ulDays = document.querySelector('#days');
 
 
-for (let item in dezDaysList) {
+for (let item of dezDaysList) {
   let liDays = document.createElement('li');
-  liDays.className = 'day';
-  liDays.innerText = dezDaysList[item];
 
+  if (item !== 26) {
+    liDays.className = 'day';
+  }else {
+    liDays.className = 'day holiday';
+  }
+  
+  liDays.innerText = dezDaysList[item];
+  
   ulDays.appendChild(liDays);
 }
 
@@ -41,5 +47,19 @@ function createButton(string) {
   
   buttonsContainer.appendChild(btnHoliday);
 }
-
 createButton('Feriado');
+
+// Exercício 3
+function changeColorHoliday() {
+  let holiday = document.querySelector('.holiday');
+
+  if (holiday.style.backgroundColor) {
+    holiday.style.backgroundColor = '';
+    holiday.style.borderRadius = '';
+  }else {
+    holiday.style.backgroundColor = 'rgb(400 , 400 , 400)';
+    holiday.style.borderRadius = '20px';
+  }
+}
+let btnHoliday = document.querySelector('#btn-holiday');
+btnHoliday.addEventListener('click', changeColorHoliday);
