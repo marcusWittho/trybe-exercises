@@ -28,3 +28,18 @@ for (let item in dezDaysList) {
 
   ulDays.appendChild(liDays);
 }
+
+// Exercício 2
+function createButton(string) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+
+  let btnHoliday = document.createElement('button');
+
+  btnHoliday.setAttribute('type' , 'button');
+  btnHoliday.id = 'btn-holiday';
+  btnHoliday.innerText = 'Feriados';
+  
+  buttonsContainer.appendChild(btnHoliday);
+}
+
+createButton('Feriado');
