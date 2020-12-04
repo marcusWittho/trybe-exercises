@@ -103,7 +103,22 @@
       let leftContent = document.querySelector('.left-content');
 
       leftContent.appendChild(img);
-    
+
+      // Exercício 8
+      let list = document.createElement('ul');
+      let rightContent = document.querySelector('.right-content');
+      let arrayList = ['um' , 'dois' , 'três' , 'quatro' , 'cinco' , 'seis' , 'sete' , 'oito' , 'nove' , 'dez'];
+
+      rightContent.appendChild(list);
+      let listUl = document.querySelector('ul');
+
+      for (let item in arrayList) {
+        let itemList = document.createElement('li');
+        itemList.innerText = arrayList[item];
+
+        listUl.appendChild(itemList);
+      }
+      
     </script>
   </body>
 </html>
