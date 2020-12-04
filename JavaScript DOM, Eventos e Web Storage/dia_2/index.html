@@ -65,16 +65,16 @@
 
       // Exercício 2
       let divMainContent = document.createElement('div');
-      divMainContent.className = 'main-center';
+      divMainContent.className = 'main-content';
 
       document.body.appendChild(divMainContent);
 
       // Exercício 3
-      let mainCenter = document.querySelector('.main-center');
+      let mainContent = document.querySelector('.main-content');
       let div2 = document.createElement('div');
       div2.className = 'center-content';
 
-      mainCenter.appendChild(div2);
+      mainContent.appendChild(div2);
 
       // Exercício 4
       let centerContent = document.querySelector('.center-content');
@@ -82,6 +82,12 @@
       paragraph1.innerText = 'Olá, sou o pragráfo 1.';
 
       centerContent.appendChild(paragraph1);
+
+      // Exercício 5
+      let div3 = document.createElement('div');
+      div3.className = 'left-content';
+
+      mainContent.appendChild(div3);
     
     </script>
   </body>
