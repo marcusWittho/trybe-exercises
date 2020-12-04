@@ -57,11 +57,12 @@
   </head>
   <body>
     <script>
+      // Parte 1
       // Exercício 1
-      let H1 = document.createElement('h1');
-      H1.innerText = 'Exercício 5.2';
+      let tagH1 = document.createElement('h1');
+      tagH1.innerText = 'Exercício 5.2';
 
-      document.body.appendChild(H1);
+      document.body.appendChild(tagH1);
 
       // Exercício 2
       let divMainContent = document.createElement('div');
@@ -126,6 +127,39 @@
         let subTitle = document.createElement('h3');
         mainContent.appendChild(subTitle);
         index += 1;
+      }
+
+      // Parte 2
+      // Exercício 1
+      tagH1.className = 'title';
+
+      // Exercício 2
+      let tagH3 = document.querySelectorAll('h3');
+      for(let item in tagH3) {
+        tagH3[item].className = 'description';
+      }
+
+      // Exercício 3
+      mainContent.removeChild(leftContent);
+
+      // Exercício 4
+      rightContent.style.marginRight = 'auto';
+
+      // Exercício 5
+      centerContent.style.backgroundColor = 'rgb(11,143,112)';
+
+      // Exercício 6
+      let listLi = document.querySelectorAll('li');
+      
+      for (let item in listLi) {
+        let element = listLi[item];
+        let subItems = ['nove' , 'dez'];
+
+        for (let subItem of subItems) {
+          if (element.innerText === subItem) {
+            listUl.removeChild(element);
+          }
+        }
       }
 
     </script>
