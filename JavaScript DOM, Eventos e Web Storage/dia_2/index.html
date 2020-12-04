@@ -62,7 +62,72 @@
       H1.innerText = 'Exercício 5.2';
 
       document.body.appendChild(H1);
-    
+
+      // Exercício 2
+      let divMainContent = document.createElement('div');
+      divMainContent.className = 'main-content';
+
+      document.body.appendChild(divMainContent);
+
+      // Exercício 3
+      let mainContent = document.querySelector('.main-content');
+      let div2 = document.createElement('div');
+      div2.className = 'center-content';
+
+      mainContent.appendChild(div2);
+
+      // Exercício 4
+      let centerContent = document.querySelector('.center-content');
+      let paragraph1 = document.createElement('p');
+      paragraph1.innerText = 'Olá, sou o pragráfo 1.';
+
+      centerContent.appendChild(paragraph1);
+
+      // Exercício 5
+      let div3 = document.createElement('div');
+      div3.className = 'left-content';
+
+      mainContent.appendChild(div3);
+
+      // Exercício 6
+      let div4 = document.createElement('div');
+      div4.className = 'right-content';
+
+      mainContent.appendChild(div4);
+
+      // Exercício 7
+      let img = document.createElement('img');
+      img.src = 'https://picsum.photos/200';
+      img.className = 'small-image';
+
+      let leftContent = document.querySelector('.left-content');
+
+      leftContent.appendChild(img);
+
+      // Exercício 8
+      let list = document.createElement('ul');
+      let rightContent = document.querySelector('.right-content');
+      let arrayList = ['um' , 'dois' , 'três' , 'quatro' , 'cinco' , 'seis' , 'sete' , 'oito' , 'nove' , 'dez'];
+
+      rightContent.appendChild(list);
+      let listUl = document.querySelector('ul');
+
+      for (let item in arrayList) {
+        let itemList = document.createElement('li');
+        itemList.innerText = arrayList[item];
+
+        listUl.appendChild(itemList);
+      }
+
+      // Exercício 9
+      let total = 3;
+      let index = 0;
+      while (index < total) {
+        let subTitle = document.createElement('h3');
+        mainContent.appendChild(subTitle);
+        index += 1;
+      }
+
     </script>
   </body>
 </html>
