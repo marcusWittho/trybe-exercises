@@ -18,22 +18,20 @@ createDaysOfTheWeek();
 // Exercício 1
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-let ulDays = document.querySelector('#days');
-
-
-for (let item of dezDaysList) {
-  let liDays = document.createElement('li');
-
-  if (item !== 26) {
+function decDays() {
+  let ulDays = document.querySelector('#days');
+  
+  for (let item in dezDaysList) {
+    let liDays = document.createElement('li');
+  
     liDays.className = 'day';
-  }else {
-    liDays.className = 'day holiday';
+    
+    liDays.innerText = dezDaysList[item];
+    
+    ulDays.appendChild(liDays);
   }
-  
-  liDays.innerText = dezDaysList[item];
-  
-  ulDays.appendChild(liDays);
 }
+decDays();
 
 // Exercício 2
 let buttonsContainer = document.querySelector('.buttons-container');
@@ -50,15 +48,17 @@ function createButtonHoliday(string) {
 createButtonHoliday('Feriado');
 
 // Exercício 3
-function changeColorHoliday() {
-  let holiday = document.querySelector('.holiday');
+let liHoliday = document.querySelectorAll('#days li')[26];
+liHoliday.className += ' holiday';
 
-  if (holiday.style.backgroundColor) {
-    holiday.style.backgroundColor = '';
-    holiday.style.borderRadius = '';
+function changeColorHoliday() {
+
+  if (liHoliday.style.backgroundColor) {
+    liHoliday.style.backgroundColor = '';
+    liHoliday.style.borderRadius = '';
   }else {
-    holiday.style.backgroundColor = 'rgb(400 , 400 , 400)';
-    holiday.style.borderRadius = '20px';
+    liHoliday.style.backgroundColor = 'rgb(400 , 400 , 400)';
+    liHoliday.style.borderRadius = '20px';
   }
 }
 let btnHoliday = document.querySelector('#btn-holiday');
@@ -76,3 +76,23 @@ function createButtonFriday(string) {
   buttonsContainer.appendChild(btnFriday);
 }
 createButtonFriday('Sextou!!');
+
+// exercício 5
+let friday = document.querySelectorAll('#days li');
+let allFridays = [5 , 12 , 19 , 26];
+
+for (let item of allFridays) {
+  friday[item].className += ' friday';
+}
+
+function changeFriday() {
+  for (let item of allFridays) {
+    if (friday[item].innerText !== 'Sextou!!') {
+      friday[item].innerText = 'Sextou!!';
+    }else {
+      friday[item].innerText = dezDaysList[item];
+    }
+  }
+}
+let btnSextou = document.querySelector('#btn-friday');
+btnSextou.addEventListener('click', changeFriday)
