@@ -54,11 +54,12 @@ function mostRepeated(array) {
         currentCount += 1;
       }
     }
-    objCount[`indice[${i}]`] = `repetiu ${currentCount} vezes`;
+    objCount[`indice[${i}]`] = currentCount;
     currentCount = 0;
   }
+  
   
   return objCount;
 }
 
-console.log(mostRepeated([2, 3, 2, 5, 8, 2, 3]));
+// console.log(mostRepeated([2, 3, 2, 5, 8, 2, 3]));
