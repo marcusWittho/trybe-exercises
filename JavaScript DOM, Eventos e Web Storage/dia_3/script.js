@@ -124,9 +124,11 @@ function colorTask(color) {
 }
 colorTask('green');
 
-
-
-
+// Exerecício 9
+const copyColor = document.querySelector('.task');
+copyColor.addEventListener('click', () => {
+  copyColor.classList.toggle('selected');
+});
 
 // Bônus
 function addTask(string) {
