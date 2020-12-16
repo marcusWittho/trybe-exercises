@@ -13,7 +13,6 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
 // Exercício 1
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
@@ -51,7 +50,6 @@ let liHoliday = document.querySelectorAll('#days li')[26];
 liHoliday.className += ' holiday';
 
 function changeColorHoliday() {
-
   if (liHoliday.style.backgroundColor) {
     liHoliday.style.backgroundColor = '';
     liHoliday.style.borderRadius = '';
@@ -69,9 +67,7 @@ function createButtonFriday(string) {
   
   btnFriday.setAttribute('type' , 'button');
   btnFriday.id = 'btn-friday';
-  // btnFriday.className = 'buttons-container';
   btnFriday.innerText = string;
-
   buttonsContainer.appendChild(btnFriday);
 }
 createButtonFriday('Sextou!!');
@@ -97,7 +93,11 @@ let btnSextou = document.querySelector('#btn-friday');
 btnSextou.addEventListener('click', changeFriday)
 
 // Exercício 6
-function changeSize(evt) {
-  evt.target.style.fontSize = '25px';
-}
-days.addEventListener('mouseover', changeSize);
+const daysOfMonth = document.querySelector('#days');
+daysOfMonth.addEventListener('mouseover', (event) => {
+  event.target.style.fontSize = '24px';
+});
+
+daysOfMonth.addEventListener('mouseout', (event) => {
+  event.target.style.fontSize = '20px';
+});
