@@ -28,6 +28,7 @@ button {
 
 #days {
   margin: 0;
+  line-height: 25px;
 }
 
 #days li {

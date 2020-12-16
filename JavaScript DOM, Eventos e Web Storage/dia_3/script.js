@@ -101,3 +101,24 @@ daysOfMonth.addEventListener('mouseover', (event) => {
 daysOfMonth.addEventListener('mouseout', (event) => {
   event.target.style.fontSize = '20px';
 });
+
+// Exercício 7
+const myTasks = document.querySelector('.my-tasks');
+const taskInput = document.querySelector('#task-input');
+const btnAdd = document.querySelector('#btn-add');
+
+function addTask(string) {
+  string = taskInput.value;
+  const span = document.createElement('span');
+  span.innerText = string;
+  span.style.display = 'block';
+  myTasks.appendChild(span);
+}
+btnAdd.addEventListener('click', addTask);
+taskInput.addEventListener('keypress', (tecla) => {
+  if (tecla.keyCode === 13) {
+    addTask();
+    taskInput.value = '';
+    taskInput.focus();
+  }
+})
