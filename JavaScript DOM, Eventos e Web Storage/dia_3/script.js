@@ -1,3 +1,8 @@
+const myTasks = document.querySelector('.my-tasks');
+const taskList = document.querySelector('.task-list-container');
+const taskInput = document.querySelector('#task-input');
+const btnAdd = document.querySelector('#btn-add');
+
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
   const weekDaysList = document.querySelector('.week-days');
@@ -103,22 +108,47 @@ daysOfMonth.addEventListener('mouseout', (event) => {
 });
 
 // Exercício 7
-const myTasks = document.querySelector('.my-tasks');
-const taskInput = document.querySelector('#task-input');
-const btnAdd = document.querySelector('#btn-add');
-
-function addTask(string) {
-  string = taskInput.value;
-  const span = document.createElement('span');
+function tasks(string) {
+  const span = document.createElement('sppan');
   span.innerText = string;
-  span.style.display = 'block';
   myTasks.appendChild(span);
 }
-btnAdd.addEventListener('click', addTask);
-taskInput.addEventListener('keypress', (tecla) => {
-  if (tecla.keyCode === 13) {
-    addTask();
+tasks('Dias de projeto: ')
+
+// Exercício 8
+function colorTask(color) {
+  const div = document.createElement('div');
+  div.className = 'task';
+  div.style.backgroundColor = color;
+  myTasks.appendChild(div);
+}
+colorTask('green');
+
+
+
+
+
+// Bônus
+function addTask(string) {
+  const li = document.createElement('li');
+  li.innerText = string;
+  li.style.display = 'block';
+  taskList.appendChild(li);
+}
+
+function checksAndAdds() {
+  if (!taskInput.value) {
+    alert('Por favor, preencha o campo. :)');
+  } else {
+    addTask(taskInput.value);
     taskInput.value = '';
     taskInput.focus();
   }
-})
+}
+
+btnAdd.addEventListener('click', checksAndAdds);
+taskInput.addEventListener('keypress', (tecla) => {
+  if (tecla.keyCode === 13) {
+    checksAndAdds();
+  }
+});
