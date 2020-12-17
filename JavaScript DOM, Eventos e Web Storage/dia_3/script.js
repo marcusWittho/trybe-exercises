@@ -2,6 +2,7 @@ const myTasks = document.querySelector('.my-tasks');
 const taskList = document.querySelector('.task-list-container');
 const taskInput = document.querySelector('#task-input');
 const btnAdd = document.querySelector('#btn-add');
+const daysOfMonth = document.querySelector('#days');
 
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
@@ -11,11 +12,9 @@ function createDaysOfTheWeek() {
     const days = weekDays[index];
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
-
     weekDaysList.appendChild(dayListItem);
   };
 };
-
 createDaysOfTheWeek();
 
 // Exercício 1
@@ -23,14 +22,11 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 
 function decDays() {
   let ulDays = document.querySelector('#days');
-  
+
   for (let item in dezDaysList) {
     let liDays = document.createElement('li');
-  
     liDays.className = 'day';
-    
     liDays.innerText = dezDaysList[item];
-    
     ulDays.appendChild(liDays);
   }
 }
@@ -45,7 +41,6 @@ function createButtonHoliday(string) {
   btnHoliday.setAttribute('type' , 'button');
   btnHoliday.id = 'btn-holiday';
   btnHoliday.innerText = string;
-  
   buttonsContainer.appendChild(btnHoliday);
 }
 createButtonHoliday('Feriado');
@@ -69,7 +64,7 @@ btnHoliday.addEventListener('click', changeColorHoliday);
 // Exercício 4
 function createButtonFriday(string) {
   let btnFriday = document.createElement('button');
-  
+
   btnFriday.setAttribute('type' , 'button');
   btnFriday.id = 'btn-friday';
   btnFriday.innerText = string;
@@ -98,7 +93,6 @@ let btnSextou = document.querySelector('#btn-friday');
 btnSextou.addEventListener('click', changeFriday)
 
 // Exercício 6
-const daysOfMonth = document.querySelector('#days');
 daysOfMonth.addEventListener('mouseover', (event) => {
   event.target.style.fontSize = '24px';
 });
@@ -129,6 +123,26 @@ const copyColor = document.querySelector('.task');
 copyColor.addEventListener('click', () => {
   copyColor.classList.toggle('selected');
 });
+
+// Exercício 10
+function getColor() {
+  let reference = 'rgb(119, 119, 119)';
+  const myTasksDiv = document.querySelector('.my-tasks div');
+  if (myTasksDiv.classList.contains('selected')) {
+    const selected = document.querySelector('.selected');
+    reference = selected.style.backgroundColor;
+  }
+  return reference;
+}
+
+daysOfMonth.addEventListener('click', (event) => {
+  const reference = document.querySelector('.task').style.backgroundColor;
+  if (event.target.style.color === reference) {
+    event.target.style.color = 'rgb(119, 119, 119)';
+  } else {
+    event.target.style.color = getColor();
+  }
+})
 
 // Bônus
 function addTask(string) {
