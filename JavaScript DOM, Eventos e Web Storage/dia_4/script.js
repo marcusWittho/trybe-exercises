@@ -18,10 +18,6 @@ if (localStorage.getItem('pageConfig')) {
 
   if (restore[0] === 'dark') {
     darkMode()
-    text.style.color = restore[1];
-    text.style.fontSize = `${restore[2]}px`;
-    text.style.lineHeight = restore[3];
-    text.style.fontFamily = restore[4];
   }
 
   text.style.color = restore[1];
