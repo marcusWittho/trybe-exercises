@@ -103,7 +103,7 @@ daysOfMonth.addEventListener('mouseout', (event) => {
 
 // Exercício 7
 function tasks(string) {
-  const span = document.createElement('sppan');
+  const span = document.createElement('span');
   span.innerText = string;
   myTasks.appendChild(span);
 }
