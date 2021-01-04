@@ -48,7 +48,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-5: _[Projeto - Meme Generator](https://github.com/marcusWittho/Meme-Generator)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/marcusWittho/Pixel-Art)_
 - [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/marcusWittho/To-Do-List)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor]()_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/marcusWittho/guess-the-color)_
 - [x] 5-7: _[Projeto - Carta Misteriosa]()_
 
 ##### Bloco 6: HTML & CSS avançado:hourglass_flowing_sand:

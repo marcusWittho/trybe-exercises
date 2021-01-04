@@ -3,20 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Currículo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input id="name" type="text" maxlength="40" required>
-  <input id="e-mail" type="text" maxlength="50" required>
-  <input id="cpf" type="text" maxlength="11" required>
-  <input id="address" type="text" maxlength="200" required>
-  <input id="city" type="text" maxlength="28" required>
-  <select name="estado" id="country" required></select>
-  <input type="radio" name="home" id="home">
-  <label for="home">Casa</label>
-  <input type="radio" name="home" id="apartment">
-  <label for="apartment">Apartamento</label>
+  <form action="" method="get">
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <input id="name" type="text" maxlength="40" required>
+      <br>
+
+      <input id="e-mail" type="text" maxlength="50" required>
+      <br>
+
+      <input id="cpf" type="text" maxlength="11" required>
+      <br>
+
+      <input id="address" type="text" maxlength="200" required>
+      <br>
+
+      <input id="city" type="text" maxlength="28" required>
+      <br>
+
+      <select name="estado" id="country" required></select>
+      <br>
+
+      <input type="radio" name="home" id="home" required>
+      <label for="home">Casa</label>
+
+      <input type="radio" name="home" id="apartment" required>
+      <label for="apartment">Apartamento</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados profissionais</legend>
+      <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required></textarea>
+      <br>
+
+      <input type="text" name="job" id="job" maxlength="40" required>
+      <br>
+
+      <textarea name="job-description" id="job-description" cols="30" rows="5" maxlength="500" required></textarea>
+      <br>
+
+      <input type="text" name="date" id="date" required>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar campos</button>
+  </form>
 
   <script src="script.js"></script>
 </body>
