@@ -10,48 +10,66 @@
   <form action="" method="get">
     <fieldset>
       <legend>Dados pessoais</legend>
+      <label for="">Nome:</label>
       <input id="name" type="text" maxlength="40" required>
       <br>
 
+      <label for="">E-mail:</label>
       <input id="e-mail" type="text" maxlength="50" required>
       <br>
 
+      <label for="">CPF:</label>
       <input id="cpf" type="text" maxlength="11" required>
       <br>
 
+      <label for="">Endereço:</label>
       <input id="address" type="text" maxlength="200" required>
       <br>
 
+      <label for="">Cidade:</label>
       <input id="city" type="text" maxlength="28" required>
       <br>
 
-      <select name="estado" id="country" required></select>
+      <label for="">Estado:</label>
+      <select name="estado" id="state" required></select>
       <br>
 
-      <input type="radio" name="home" id="home" required>
-      <label for="home">Casa</label>
+      <div id="radios">
+        <label>Informação complementar.</label>
+        <input type="radio" name="home" value="Casa" id="home" required>
+        <label for="home">Casa</label>
 
-      <input type="radio" name="home" id="apartment" required>
-      <label for="apartment">Apartamento</label>
+        <input type="radio" name="home" value="Apartamento" id="apartment" required>
+        <label for="apartment">Apartamento</label>
+      </div>
     </fieldset>
 
     <fieldset>
       <legend>Dados profissionais</legend>
+
+      <label for="">Resumo do currículo:</label>
+      <br>
       <textarea name="abstract" id="abstract" cols="30" rows="5" maxlength="1000" required></textarea>
       <br>
 
+      <label for="">Cargo:</label>
       <input type="text" name="job" id="job" maxlength="40" required>
       <br>
 
+      <label for="">Descrição do cargo:</label>
+      <br>
       <textarea name="job-description" id="job-description" cols="30" rows="5" maxlength="500" required></textarea>
       <br>
 
+      <label for="">Data de início:</label>
       <input type="text" name="date" id="date" required>
     </fieldset>
 
-    <button type="submit">Enviar</button>
+    <button type="submit" id="btnSend">Enviar</button>
     <button type="reset">Limpar campos</button>
   </form>
+
+  <div id="inserted-data"></div>
 
   <script src="script.js"></script>
 </body>
