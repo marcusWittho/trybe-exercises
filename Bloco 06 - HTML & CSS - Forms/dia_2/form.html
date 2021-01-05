@@ -1,74 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
 </head>
 <body>
-  <form action="" method="get" class="form">
-    <fieldset class="fieldset-personal">
+  <form action="" method="get">
+    <fieldset>
       <legend>Dados pessoais</legend>
-      <label for="">Nome:</label>
-      <input class="input-info name" id="name" type="text" maxlength="40" required>
+      <div>
+        <label for="">Nome:</label>
+        <input id="name" type="text" maxlength="40" required>
+        <br>
+      </div>
 
-      <label for="">E-mail:</label>
-      <input class="input-info e-mail" id="e-mail" type="text" maxlength="50" required>
+      <div>
+        <label for="">E-mail:</label>
+        <input id="e-mail" type="text" maxlength="50" required>
+        <br>
+      </div>
 
-      <label for="">CPF:</label>
-      <input class="input-info cpf" id="cpf" type="text" maxlength="11" required>
-      <br>
+      <div>
+        <label for="">CPF:</label>
+        <input id="cpf" type="text" maxlength="11" required>
+        <br>
+      </div>
 
-      <label for="">Endereço:</label>
-      <input class="input-info address" id="address" type="text" maxlength="200" required>
+      <div>
+        <label for="">Endereço:</label>
+        <input id="address" type="text" maxlength="200" required>
+        <br>
+      </div>
 
-      <label for="">Cidade:</label>
-      <input class="input-info city" id="city" type="text" maxlength="28" required>
+      <div>
+        <label for="">Cidade:</label>
+        <input id="city" type="text" maxlength="28" required>
+        <br>
+      </div>
 
-      <label for="">Estado:</label>
-      <select name="estado" class="state" id="state" required></select>
-      <br>
+      <div>
+        <label for="">Estado:</label>
+        <select name="estado" required></select>
+        <br>
+      </div>
 
-      <div class="radios" id="radios">
+      <div>
         <label>Informação complementar:</label>
-        <input type="radio" name="home" value="Casa" class="home" id="home" required>
+        <input type="radio" name="home" value="Casa" required>
+
         <label for="home">Casa</label>
 
-        <input type="radio" name="home" value="Apartamento" class="apartment" id="apartment" required>
+        <input type="radio" name="home" value="Apartamento" required>
         <label for="apartment">Apartamento</label>
       </div>
     </fieldset>
 
-    <fieldset class="fieldset-professional">
+    <fieldset>
       <legend>Dados profissionais</legend>
 
-      <label for="" class="label-area1 align">Resumo do currículo:</label>
+      <label for="" o currículo:></label>
       <br>
-      <textarea name="abstract" class="textarea-abstract align" id="abstract" cols="60" rows="5" maxlength="1000" required></textarea>
-      <br>
-
-      <label for=""  class="label-area2 align">Cargo:</label>
-      <input type="text" name="job" class="input-info job" id="job" maxlength="40" required>
+      <textarea name="abstract" cols="60" rows="5" maxlength="1000" required></textarea>
       <br>
 
-      <label for=""  class="label-area2 align">Descrição do cargo:</label>
-      <br>
-      <textarea name="job-description" class="textarea-job align" id="job-description" cols="60" rows="5" maxlength="500" required></textarea>
+      <label for=""></label>
+      <input type="text" name="job" l" id="job" maxlength="40" required>
       <br>
 
-      <label for=""  class="label-area1 align">Data de início:</label>
-      <input type="text" name="date" class="input-info date" id="date" required>
+      <label for="">cargo:</label>
+      <br>
+      <textarea name="job-description" cols="60" rows="5" maxlength="500" required></textarea>
+      <br>
+
+      <label for="">início:</label>
+      <input type="text" name="date" l" id="date" required>
     </fieldset>
 
-    <div class="align-buttons">
-      <button type="submit" class="button btn-send" id="btnSend">Enviar</button>
-      <button type="reset" class="button btn-reset">Limpar campos</button>
+    <div>
+      <button type="submit" id="btnSend">Enviar</button>
+      <button type="reset">Limpar</button>
     </div>
   </form>
 
   <div id="inserted-data"></div>
 
   <script src="script.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
