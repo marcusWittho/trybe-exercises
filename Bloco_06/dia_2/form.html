@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+<body>
+  <header class="section">
+    <h1 class="title has-text-centered">
+      Currículo
+    </h1>
+  </header>
+
+  <div class="section">
+    <form action="#" id="form">
+      <div class="control">
+
+        <div class="field">
+          <label class="label" for="">Nome:</label>
+          <input class="input is-info" id="name" data-validate-field="name" name="name" type="text" maxlength="40">
+        </div>
+
+        <div class="field">
+          <label class="label" for="">E-mail:</label>
+          <input class="input is-info" id="e-mail" type="email" maxlength="50" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">CPF:</label>
+          <input class="input is-info" id="cpf" type="text" maxlength="11" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">Endereço:</label>
+          <input class="input is-info" id="address" type="text" maxlength="200" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">Cidade:</label>
+          <input class="input is-info" id="city" type="text" maxlength="28" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">Estado:</label>
+          <div class="select is-rounded">
+            <select name="estado" id="state" required></select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" >Informação complementar:</label>
+
+          <input class="radio" id="home" type="radio" name="home" value="Casa" required>
+          <label for="home">Casa</label>
+
+          <input class="radio" id="apartment" type="radio" name="home" value="Apartamento" required>
+          <label for="apartment">Apartamento</label>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">Resumo do currículo:</label>
+          <textarea class="textarea is-info" name="abstract" cols="60" rows="5" maxlength="1000" placeholder="Breve resumo do currículo" required></textarea>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">Cargo:</label>
+          <input class="input is-info" type="text" name="job" id="job" maxlength="40" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">resumo do cargo:</label>
+          <textarea class="textarea is-info" name="job-description" cols="60" rows="5" maxlength="500" placeholder="Breve resumo do cargo" required></textarea>
+        </div>
+
+        <div class="field">
+          <label class="label" for="">início:</label>
+          <input class="input is-info" id="datepicker" type="text" name="date"  autocomplete="none" required>
+        </div>
+
+        <div class="buttons">
+          <button class="button is-info" type="submit" id="btn-send">Enviar</button>
+          <button class="button is-warning" type="reset" id="btn-clear">Limpar</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div id="inserted-data"></div>
+
+  <script src="./node_modules/pikaday/pikaday.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

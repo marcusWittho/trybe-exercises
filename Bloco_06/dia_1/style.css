@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-border: rgb(240, 240, 240);
+  --color-border-bottom: rgb(190, 190, 190);
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.fieldset-personal, .fieldset-professional {
+  background-color: white;
+  border-radius: 15px;
+  border-color: var(--color-border);
+  margin: 30px auto;
+  padding: 30px;
+  width: 60%;
+}
+
+.input-info {
+  border: none;
+  border-bottom: 2px solid var(--color-border-bottom);
+  margin: 10px 0;
+  outline: none;
+  width: 30%;
+}
+
+.radios {
+  margin: 10px 0;
+}
+
+.name {
+  width: 35%;
+}
+
+.cpf {
+  width: 15%;
+}
+
+.address {
+  width: 40%;
+}
+
+.align {
+  margin-left: 20%;
+}
+
+.textarea-abstract, .textarea-job {
+  border-radius: 10px;
+  border-color: var(--color-border-bottom);
+  margin-bottom: 20px;
+  outline: none;
+  padding: 10px;
+}
+
+.align-buttons {
+  text-align: center;
+}
+
+form button + button {
+  margin-left: 30px;
+}
+
+.button {
+  width: 120px;
+  padding: 5px;
+  background-color: rgb(164, 244, 255);
+  border-radius: 7px;
+  border: 1px solid rgb(65, 119, 126);
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(164, 234, 255);
+}
+
+.button:active {
+  background-color: rgb(164, 226, 255);
+}
