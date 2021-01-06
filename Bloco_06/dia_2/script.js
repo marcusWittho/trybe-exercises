@@ -2,7 +2,6 @@ const states = document.querySelector('#state');
 const btnSend = document.querySelector("#btn-send");
 const btnClear = document.querySelector("#btn-clear");
 const form = document.querySelector("#form");
-const inName = document.querySelector('#name');
 const datepicker = document.querySelector('#datepicker');
 
 function createOptions() {
