@@ -6,10 +6,15 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 20px;
+}
+
 .header {
   width: 100%;
   background-color: rgb(206, 206, 206);
   text-align: center;
+  margin: 0;
 }
 
 .header p {
@@ -59,4 +64,38 @@ html {
 
 .footer h3 {
   font-size: 1.3em;
+}
+
+@media only screen and (min-width: 730px) {
+  body {
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  .aside-one ul {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .aside-one ul li {
+    padding: 0 15px;
+  }
+
+  .aside-two ul {
+    max-width: 890px;
+    margin: 0 auto;
+  }
+
+  .main-content p {
+    max-width: 890px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    max-width: 890px;
+    margin: 0 auto;
+  }
 }
