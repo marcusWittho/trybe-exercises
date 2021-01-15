@@ -87,3 +87,10 @@ const student2 = {
 
 const result = Object.assign(classe, student1, student2);
 console.log(result); */
+
+function getValue(propertie, position) {
+  const values = Object.values(allLessons[propertie]);
+  const returnValue = values[position];
+  return returnValue;
+}
+console.log(getValue(lesson1, 0));
