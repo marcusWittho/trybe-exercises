@@ -11,7 +11,7 @@ const arrays = [
 function flatten() {
   // escreva seu código aqui
   const newArray = [];
-  return arrays.reduce((acumulator, array) => acumulator.concat(array), newArray);
+  return arrays.reduce((accumulator, array) => accumulator.concat(array), newArray);
 
 }
 
