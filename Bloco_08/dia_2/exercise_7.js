@@ -63,17 +63,26 @@ const books = [
   },
 ];
 
-const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu'
-]
+const expectedResult = 'O Senhor dos Anéis';
 
-function oldBooks() {
+function authorWith3DotsOnName() {
   // escreva seu código aqui
-  const year = 2021;
-  const older = books.filter((book) => (year - book.releaseYear) > 60);
-  return older.map((bookName) => bookName.name);
+
+  return books.find(book => (
+    book.author.name.split(' ').filter(word => word.endsWith('.')).length === 3
+  )).name;
+
+/*   // Mais complicado, mas valeu a prática :)
+  let bookName = '';
+  books.find((book) => {
+    let returnRegex = book.author.name.match(/[A-Z\. ]{3}/g);
+    if (returnRegex !== null && returnRegex.length === 3) {
+      bookName = book.name;
+    }
+  });
+  return bookName; */
 }
 
-assert.deepStrictEqual(oldBooks(), expectedResult);
+// console.log(authorWith3DotsOnName())
+
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
