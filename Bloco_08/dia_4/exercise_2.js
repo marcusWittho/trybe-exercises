@@ -2,8 +2,8 @@ const assert = require('assert')
 
 // escreva sum abaixo
 
-const sum = (...params) => {
-  return params.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+const sum = (...args) => {
+  return args.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
 }
 
 assert.strictEqual(sum(), 0)
