@@ -1,0 +1,26 @@
+{
+  "name": "trybe-exercises",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">  <img src=\"https://github.com/marcusWittho/trybe-exercises/blob/master/logo.png\" alt=\"Logo da Trybe\"/> </p>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusWittho/trybe-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcusWittho/trybe-exercises/issues"
+  },
+  "homepage": "https://github.com/marcusWittho/trybe-exercises#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
