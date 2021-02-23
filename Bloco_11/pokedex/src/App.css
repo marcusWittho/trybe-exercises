@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  max-width: 470px;
+  margin: 0 auto;
+}
+
+.previous {
+  border-radius: 100% 0 0 100%;
+  outline: none;
+}
+
+.next {
+  border-radius: 0 100% 100% 0;
+  outline: none;
+}
+
+.fire, .psychic {
+  width: 90px;
+}
+
+.typeContainer {
+  text-align: center;
+  max-width: 470px;
+  margin: 20px auto;
+}
+
+.typeContainer button + button {
+  margin-left: 20px;
+}
